@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="is">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Verkefni 8</title>
+  </head>
+  <body>
+    <main>
+      <h1>Caesar dulmál</h1>
+      <form class="ceasar" method="get" action="/">
+        <div class="input alphabet">
+          <label for="alphabet">Stafróf:</label>
+          <input type="text" id="alphabet" name="alphabet" value="AÁBDÐEÉFGHIÍJKLMNOÓPRSTUÚVXYÝÞÆÖ" oninput ="Stafróf(this.value)">
+        </div>
+
+        <div class="radio">
+          <label>
+            <input checked type="radio" name="type" value="encode" onclick="radio(this)">
+            <span>Kóða</span>
+          </label>
+          <label>
+            <input type="radio" name="type" value="decode" onclick="radio(this)">
+            <span>Afkóða</span>
+          </label>
+        </div>
+
+        <div class="input">
+          <label for="shift">Hliðrun:</label>
+          <div class="range">
+            <input type="range" min="1" max="32" id="shift" value="1" name="shift" oninput ="shifting(this.value)">
+            <span id="shiftValue">1</span>
+          </div>
+        </div>
+
+        <div class="input">
+          <label for="input">Strengur:</label>
+          <input type="text" id="input" name="input" autocomplete="off" oninput="input1(this)">
+        </div>
+
+        <div id="result"></div>
+      </form>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
